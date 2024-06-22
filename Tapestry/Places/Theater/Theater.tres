@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Tapestry_Item" load_steps=6 format=3 uid="uid://cn1a1itt2dirt"]
+
+[ext_resource type="Texture2D" uid="uid://cdg2lp1a0qcse" path="res://Tapestry/Places/Theater/theaterDayWool.png" id="1_4fg7w"]
+[ext_resource type="Script" path="res://Tapestry/tapestry_item.gd" id="1_5p650"]
+[ext_resource type="Texture2D" uid="uid://buaj2qajmfrwv" path="res://Tapestry/Places/Theater/theaterWindyWool.png" id="2_8126f"]
+[ext_resource type="Texture2D" uid="uid://br5lhwcqslead" path="res://Tapestry/Places/Theater/theaterNightWool.png" id="2_nibi7"]
+[ext_resource type="Texture2D" uid="uid://b58fd6h05jpt6" path="res://Tapestry/Places/Theater/theaterThunderWool.png" id="3_8yo0a"]
+
+[resource]
+script = ExtResource("1_5p650")
+name = "Theater"
+DAY = ExtResource("1_4fg7w")
+NIGHT = ExtResource("2_nibi7")
+WINDY = ExtResource("2_8126f")
+THUNDER = ExtResource("3_8yo0a")

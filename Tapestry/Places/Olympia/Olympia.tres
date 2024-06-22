@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Tapestry_Item" load_steps=6 format=3 uid="uid://dfutoygrnyl1p"]
+
+[ext_resource type="Script" path="res://Tapestry/tapestry_item.gd" id="1_6bnlx"]
+[ext_resource type="Texture2D" uid="uid://dctvfuquylgtg" path="res://Tapestry/Places/Olympia/olympiaNightWool.png" id="2_13dpt"]
+[ext_resource type="Texture2D" uid="uid://dooaxwwqbvie7" path="res://Tapestry/Places/Olympia/olympiaDayWool.png" id="2_70xy8"]
+[ext_resource type="Texture2D" uid="uid://dyckhrhtv480v" path="res://Tapestry/Places/Olympia/olympiaThunderWool.png" id="3_a6uau"]
+[ext_resource type="Texture2D" uid="uid://clmfd40mw1njh" path="res://Tapestry/Places/Olympia/olympiaWindyWool.png" id="3_njl6h"]
+
+[resource]
+script = ExtResource("1_6bnlx")
+type = "place"
+name = "Olympia"
+DAY = ExtResource("2_70xy8")
+NIGHT = ExtResource("2_13dpt")
+WINDY = ExtResource("3_njl6h")
+THUNDER = ExtResource("3_a6uau")
