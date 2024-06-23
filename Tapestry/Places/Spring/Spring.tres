@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Tapestry_Item" load_steps=6 format=3 uid="uid://bdstsngls5k26"]
+
+[ext_resource type="Script" path="res://Tapestry/tapestry_item.gd" id="1_qqg3h"]
+[ext_resource type="Texture2D" uid="uid://fci43qh78soc" path="res://Tapestry/Places/Spring/SpringDayWool.png" id="1_xd7eg"]
+[ext_resource type="Texture2D" uid="uid://dqbknna16vmee" path="res://Tapestry/Places/Spring/SpringNightWool.png" id="2_nwu80"]
+[ext_resource type="Texture2D" uid="uid://hbb5hjxdi6ts" path="res://Tapestry/Places/Spring/SpringThunderWool.png" id="3_gv41y"]
+[ext_resource type="Texture2D" uid="uid://di7h2pdfb58sg" path="res://Tapestry/Places/Spring/SpringWindyWool.png" id="4_2kbt8"]
+
+[resource]
+script = ExtResource("1_qqg3h")
+name = "Spring"
+DAY = ExtResource("1_xd7eg")
+NIGHT = ExtResource("2_nwu80")
+WINDY = ExtResource("4_2kbt8")
+THUNDER = ExtResource("3_gv41y")

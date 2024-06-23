@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://dg2stdxcok41d"]
+
+[ext_resource type="PackedScene" uid="uid://d1ivxne5jtehe" path="res://Background/Places/olympiaTilemap.tscn" id="1_8mtg2"]
+[ext_resource type="Resource" uid="uid://dfutoygrnyl1p" path="res://Tapestry/Places/Olympia/Olympia.tres" id="2_0lm64"]
+
+[node name="Temple" instance=ExtResource("1_8mtg2")]
+place_given = ExtResource("2_0lm64")
+setting_given = 1
+
+[node name="Ground2" parent="." index="0"]
+visible = false
+
+[node name="Ground" parent="." index="1"]
+visible = false
+
+[node name="Ground3" parent="." index="2"]
+visible = true
+
+[node name="Ground4" parent="." index="3"]
+visible = true
+
+[node name="OlympiaPillars" parent="." index="7"]
+visible = false
+
+[node name="OlympiaPillars2" parent="." index="8"]
+visible = true

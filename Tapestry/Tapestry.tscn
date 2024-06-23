@@ -25,7 +25,7 @@ grow_vertical = 2
 script = ExtResource("1_4wrbg")
 starting_items = Array[ExtResource("2_rk1cc")]([ExtResource("2_2uno6")])
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -39,24 +39,54 @@ offset_bottom = 100.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
 theme = SubResource("Theme_k6yxr")
 
-[node name="Place" type="TextureRect" parent="HBoxContainer/PanelContainer"]
+[node name="Place" type="TextureRect" parent="VBoxContainer/HBoxContainer/PanelContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
 
-[node name="PlaceButton" type="OptionButton" parent="HBoxContainer/VBoxContainer"]
+[node name="Close" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "X"
+
+[node name="PlaceButton" type="OptionButton" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="SettingButton" type="OptionButton" parent="HBoxContainer/VBoxContainer"]
+[node name="SettingButton" type="OptionButton" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 
-[connection signal="item_selected" from="HBoxContainer/VBoxContainer/PlaceButton" to="." method="_on_place_button_item_selected"]
-[connection signal="item_selected" from="HBoxContainer/VBoxContainer/SettingButton" to="." method="_on_setting_button_item_selected"]
+[node name="CharButton" type="OptionButton" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Control2" type="Control" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Submit" type="Button" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "Submit"
+
+[node name="Control" type="Control" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/VBoxContainer/Close" to="." method="_on_close_pressed"]
+[connection signal="item_selected" from="VBoxContainer/HBoxContainer/VBoxContainer/PlaceButton" to="." method="_on_place_button_item_selected"]
+[connection signal="item_selected" from="VBoxContainer/HBoxContainer/VBoxContainer/SettingButton" to="." method="_on_setting_button_item_selected"]
+[connection signal="item_selected" from="VBoxContainer/HBoxContainer/VBoxContainer/CharButton" to="." method="_on_char_button_item_selected"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/Submit" to="." method="_on_submit_pressed"]

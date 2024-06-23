@@ -1,0 +1,163 @@
+[gd_scene load_steps=9 format=4 uid="uid://6w0kogq61wjf"]
+
+[ext_resource type="Texture2D" uid="uid://b034j5tpwk87e" path="res://Background/Tiles/isometric-sandbox-32x32/isometric-sandbox-sheet.png" id="1_ffp6l"]
+[ext_resource type="Script" path="res://Background/Places/theater_tilemap.gd" id="1_gsh11"]
+[ext_resource type="Resource" uid="uid://bdstsngls5k26" path="res://Tapestry/Places/Spring/Spring.tres" id="2_fo3ny"]
+[ext_resource type="Texture2D" uid="uid://chxxkxphse7e5" path="res://Characters/Arachne.png" id="2_lwcbp"]
+[ext_resource type="PackedScene" uid="uid://cxkxuqs5bc1r" path="res://Characters/chosen_character.tscn" id="3_dw8mq"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_beok4"]
+texture = ExtResource("1_ffp6l")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(0, -8)
+1:0/0 = 0
+1:0/0/texture_origin = Vector2i(0, -8)
+2:0/0 = 0
+2:0/0/texture_origin = Vector2i(0, -8)
+3:0/0 = 0
+3:0/0/texture_origin = Vector2i(0, -8)
+4:0/0 = 0
+4:0/0/texture_origin = Vector2i(0, -8)
+5:0/0 = 0
+5:0/0/texture_origin = Vector2i(0, -8)
+0:1/0 = 0
+0:1/0/texture_origin = Vector2i(0, -8)
+1:1/0 = 0
+1:1/0/texture_origin = Vector2i(0, -8)
+2:1/0 = 0
+2:1/0/texture_origin = Vector2i(0, -8)
+3:1/0 = 0
+3:1/0/texture_origin = Vector2i(0, -8)
+4:1/0 = 0
+4:1/0/texture_origin = Vector2i(0, -8)
+5:1/0 = 0
+5:1/0/texture_origin = Vector2i(0, -8)
+0:2/0 = 0
+0:2/0/texture_origin = Vector2i(0, -8)
+1:2/0 = 0
+1:2/0/texture_origin = Vector2i(0, -8)
+2:2/0 = 0
+2:2/0/texture_origin = Vector2i(0, -8)
+3:2/0 = 0
+3:2/0/texture_origin = Vector2i(0, -8)
+4:2/0 = 0
+4:2/0/texture_origin = Vector2i(0, -8)
+5:2/0 = 0
+5:2/0/texture_origin = Vector2i(0, -8)
+0:3/0 = 0
+0:3/0/texture_origin = Vector2i(0, -8)
+1:3/0 = 0
+1:3/0/texture_origin = Vector2i(0, -8)
+2:3/0 = 0
+2:3/0/texture_origin = Vector2i(0, -8)
+3:3/0 = 0
+3:3/0/texture_origin = Vector2i(0, -8)
+4:3/0 = 0
+4:3/0/texture_origin = Vector2i(0, -8)
+5:3/0 = 0
+5:3/0/texture_origin = Vector2i(0, -8)
+0:4/0 = 0
+0:4/0/texture_origin = Vector2i(0, -8)
+1:4/0 = 0
+1:4/0/texture_origin = Vector2i(0, -8)
+2:4/0 = 0
+2:4/0/texture_origin = Vector2i(0, -8)
+3:4/0 = 0
+3:4/0/texture_origin = Vector2i(0, -8)
+4:4/0 = 0
+4:4/0/texture_origin = Vector2i(0, -8)
+5:4/0 = 0
+5:4/0/texture_origin = Vector2i(0, -8)
+4:5/0 = 0
+4:5/0/texture_origin = Vector2i(0, -8)
+5:5/0 = 0
+5:5/0/texture_origin = Vector2i(0, -8)
+0:6/0 = 0
+0:6/0/texture_origin = Vector2i(0, -8)
+1:6/0 = 0
+1:6/0/texture_origin = Vector2i(0, -8)
+2:6/0 = 0
+2:6/0/texture_origin = Vector2i(0, -8)
+3:6/0 = 0
+3:6/0/texture_origin = Vector2i(0, -8)
+4:6/0 = 0
+4:6/0/texture_origin = Vector2i(0, -8)
+5:6/0 = 0
+5:6/0/texture_origin = Vector2i(0, -8)
+0:7/0 = 0
+0:7/0/texture_origin = Vector2i(0, -8)
+1:7/0 = 0
+1:7/0/texture_origin = Vector2i(0, -8)
+2:7/0 = 0
+2:7/0/texture_origin = Vector2i(0, -8)
+3:7/0 = 0
+3:7/0/texture_origin = Vector2i(0, -8)
+4:7/0 = 0
+4:7/0/texture_origin = Vector2i(0, -8)
+5:7/0 = 0
+5:7/0/texture_origin = Vector2i(0, -8)
+0:8/0 = 0
+0:8/0/texture_origin = Vector2i(0, -8)
+1:8/0 = 0
+1:8/0/texture_origin = Vector2i(0, -8)
+4:8/0 = 0
+4:8/0/texture_origin = Vector2i(0, -8)
+5:8/0 = 0
+5:8/0/texture_origin = Vector2i(0, -8)
+0:5/0 = 0
+0:5/0/texture_origin = Vector2i(0, -8)
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_fsc20"]
+tile_shape = 1
+tile_layout = 5
+tile_offset_axis = 1
+tile_size = Vector2i(32, 16)
+physics_layer_0/collision_layer = 1
+sources/1 = SubResource("TileSetAtlasSource_beok4")
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u6waw"]
+radius = 38.4298
+height = 175.993
+
+[node name="Theater" type="Node2D"]
+scale = Vector2(2, 2)
+script = ExtResource("1_gsh11")
+place_given = ExtResource("2_fo3ny")
+
+[node name="Theater" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAD+////AQAAAAMAAAD9/wAAAQAAAAMAAAD9/wEAAQAAAAMAAAD8/wIAAQAAAAMAAAD8/wMAAQAAAAMAAAD///7/AQAAAAMAAAAAAP7/AQAAAAMAAAABAP3/AQAAAAMAAAACAP3/AQAAAAMAAAD7/wAAAQAAAAMAAAD7////AQAAAAMAAAD8//7/AQAAAAMAAAD9//3/AQAAAAMAAAD+//z/AQAAAAMAAAD///z/AQAAAAMAAAAAAPv/AQAAAAMAAAABAPv/AQAAAAMAAAD6/wEAAQAAAAMAAAD6/wIAAQAAAAMAAAD5////AQAAAAMAAAD5//7/AQAAAAMAAAD6//3/AQAAAAMAAAD7//z/AQAAAAMAAAD8//v/AQAAAAMAAAD9//r/AQAAAAMAAAD+//r/AQAAAAMAAAD///n/AQAAAAMAAAAAAPn/AQAAAAMAAAD4/wAAAQAAAAMAAAD4/wEAAQAAAAMAAAD2/wAAAQAAAAMAAAD2////AQAAAAMAAAD3//7/AQAAAAMAAAD3//3/AQAAAAMAAAD4//z/AQAAAAMAAAD5//v/AQAAAAMAAAD6//r/AQAAAAMAAAD7//n/AQAAAAMAAAD8//j/AQAAAAMAAAD9//j/AQAAAAMAAAD+//f/AQAAAAMAAAD///f/AQAAAAMAAAD+/wMAAQAAAAYAAAD+/wQAAQAAAAYAAAD//wQAAQAAAAYAAAD//wMAAQAAAAYAAAD//wIAAQAAAAYAAAD//wEAAQAAAAYAAAAAAAEAAQAAAAYAAAAAAAAAAQAAAAYAAAABAAAAAQAAAAYAAAACAP//AQAAAAYAAAADAP//AQAAAAYAAAADAAAAAQAAAAYAAAACAAAAAQAAAAYAAAACAAEAAQAAAAYAAAABAAEAAQAAAAYAAAAAAAIAAQAAAAYAAAAAAAQAAQAAAAYAAAAAAAMAAQAAAAYAAAABAAMAAQAAAAYAAAABAAIAAQAAAAYAAAACAAIAAQAAAAYAAAACAAMAAQAAAAYAAAABAAQAAQAAAAYAAAACAAQAAQAAAAYAAAADAAMAAQAAAAYAAAADAAIAAQAAAAYAAAADAAEAAQAAAAYAAAADAAQAAQAAAAYAAAAEAAQAAQAFAAYAAAAEAAMAAQAFAAYAAAAEAAIAAQAFAAYAAAAEAAEAAQAFAAYAAAAEAAAAAQAFAAYAAAAEAP//AQAFAAYAAAADAAUAAQAEAAYAAAACAAUAAQAEAAYAAAABAAUAAQAEAAYAAAAAAAUAAQAEAAYAAAD//wUAAQAEAAYAAAD+/wUAAQAEAAYAAAD0////AQAAAAMAAAD0//7/AQAAAAMAAAD1//3/AQAAAAMAAAD1//z/AQAAAAMAAAD2//v/AQAAAAMAAAD3//r/AQAAAAMAAAD4//n/AQAAAAMAAAD5//j/AQAAAAMAAAD6//f/AQAAAAMAAAD7//b/AQAAAAMAAAD8//b/AQAAAAMAAAD9//X/AQAAAAMAAAD+//X/AQAAAAMAAAD0/wAAAQAAAAMAAAD2/wEAAQAAAAMAAAD4/wIAAQAAAAMAAAD6/wMAAQAAAAMAAAD8/wQAAQAAAAMAAAADAP3/AQAAAAMAAAACAPv/AQAAAAMAAAABAPn/AQAAAAMAAAAAAPf/AQAAAAMAAAD///X/AQAAAAMAAAAEAP7/AQAAAAMAAAD9/wUAAQAAAAMAAAD8/wUAAQAAAAMAAAD7/wUAAQAAAAMAAAD5/wQAAQAAAAMAAAD3/wMAAQAAAAMAAAD1/wIAAQAAAAMAAAAEAP3/AQAAAAMAAAAEAPz/AQAAAAMAAAADAPr/AQAAAAMAAAACAPj/AQAAAAMAAAABAPb/AQAAAAMAAADz/wEAAQAAAAAAAADz////AQAAAAAAAADz/wAAAQAAAAAAAADz//7/AQAAAAAAAADy//7/AQAAAAAAAADz//3/AQAAAAAAAADz//z/AQAAAAAAAAD0//z/AQAAAAAAAAD0//3/AQAAAAAAAADy//z/AQAAAAAAAADy//3/AQAAAAAAAADy////AQAAAAAAAADy/wAAAQAAAAAAAADy/wEAAQAAAAAAAADy//v/AQAAAAAAAADy//r/AQAAAAAAAADy//n/AQAAAAAAAADy//j/AQAAAAAAAADy//f/AQAAAAAAAADy//b/AQAAAAAAAADz//b/AQAAAAAAAADz//X/AQAAAAAAAADy//X/AQAAAAAAAAAAAPT/AQAAAAAAAAD///T/AQAAAAAAAAD+//T/AQAAAAAAAAD9//T/AQAAAAAAAAD8//T/AQAAAAAAAAD7//T/AQAAAAAAAAD6//T/AQAAAAAAAAD5//T/AQAAAAAAAAD4//T/AQAAAAAAAAD3//T/AQAAAAAAAAD2//T/AQAAAAAAAAD1//T/AQAAAAAAAAD0//T/AQAAAAAAAADz//T/AQAAAAAAAADy//T/AQAAAAAAAAD0//b/AQAAAAAAAAD0//X/AQAAAAAAAAD1//X/AQAAAAAAAAD1//b/AQAAAAAAAAD1//f/AQAAAAAAAAD1//j/AQAAAAAAAAD0//j/AQAAAAAAAADz//j/AQAAAAAAAADz//n/AQAAAAAAAADz//r/AQAAAAAAAAD0//r/AQAAAAAAAAD0//v/AQAAAAAAAADz//v/AQAAAAAAAAD1//v/AQAAAAAAAAD0//n/AQAAAAAAAAD0//f/AQAAAAAAAADz//f/AQAAAAAAAAD1//n/AQAAAAAAAAD1//r/AQAAAAAAAAD2//r/AQAAAAAAAAD2//j/AQAAAAAAAAD2//f/AQAAAAAAAAD2//b/AQAAAAAAAAD2//X/AQAAAAAAAAD3//X/AQAAAAAAAAD4//X/AQAAAAAAAAD5//X/AQAAAAAAAAD2//n/AQAAAAAAAAD3//n/AQAAAAAAAAD3//j/AQAAAAAAAAD3//f/AQAAAAAAAAD3//b/AQAAAAAAAAD4//j/AQAAAAAAAAD4//f/AQAAAAAAAAD4//b/AQAAAAAAAAD5//f/AQAAAAAAAAD5//b/AQAAAAAAAAD6//b/AQAAAAAAAAD6//X/AQAAAAAAAAD7//X/AQAAAAAAAAD8//X/AQAAAAAAAAD1/wMAAQACAAAAAAD3/wQAAQACAAAAAAD5/wUAAQACAAAAAAD0/wMAAQAAAAAAAADz/wMAAQAAAAAAAAAAAPP/AQAAAAAAAAD///P/AQAAAAAAAAD+//P/AQAAAAAAAAD9//P/AQAAAAAAAAD8//P/AQAAAAAAAAD7//P/AQAAAAAAAAD6//P/AQAAAAAAAAD5//P/AQAAAAAAAAD4//P/AQAAAAAAAAD3//P/AQAAAAAAAAD2//P/AQAAAAAAAAD1//P/AQAAAAAAAAD0//P/AQAAAAAAAADz//P/AQAAAAAAAADy//P/AQAAAAAAAAD7/wYAAQACAAAAAAD9/wcAAQAAAAAAAAD+/wcAAQAAAAAAAAD//wcAAQAAAAAAAAAAAAcAAQAAAAAAAAABAAcAAQAAAAAAAAACAAcAAQAAAAAAAAADAAcAAQAAAAAAAAAEAAcAAQAAAAAAAAAFAAcAAQAAAAAAAAAFAAYAAQAAAAAAAAAGAAYAAQAAAAAAAAAGAAUAAQAAAAAAAAAGAAQAAQAAAAAAAAAGAAMAAQAAAAAAAAAGAAIAAQAAAAAAAAAGAAEAAQAAAAAAAAAGAAAAAQAAAAAAAAAGAP//AQAAAAAAAAAGAP7/AQAAAAAAAAAFAPz/AQADAAAAAAAEAPr/AQADAAAAAAADAPj/AQADAAAAAAACAPb/AQADAAAAAAACAPX/AQAAAAAAAAACAPT/AQAAAAAAAAAGAAcAAQAAAAAAAAA=")
+tile_set = SubResource("TileSet_fsc20")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0.5, 42.5)
+rotation = -1.58708
+shape = SubResource("CapsuleShape2D_u6waw")
+
+[node name="give" type="Button" parent="Area2D"]
+offset_left = -97.0
+offset_top = 6.0
+offset_right = 89.0
+offset_bottom = 80.0
+flat = true
+
+[node name="ChosenCharacter" parent="." instance=ExtResource("3_dw8mq")]
+
+[node name="Arachne" type="Sprite2D" parent="."]
+position = Vector2(-0.5, -204.5)
+texture = ExtResource("2_lwcbp")
+
+[node name="Button" type="Button" parent="Arachne"]
+offset_left = -12.0
+offset_top = -16.0
+offset_right = 13.0
+offset_bottom = 15.0
+flat = true
+
+[connection signal="pressed" from="Area2D/give" to="." method="_on_give_pressed"]
+[connection signal="pressed" from="Arachne/Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,62 @@
+[gd_scene load_steps=7 format=3 uid="uid://lvy6bgg3pfnt"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_xinb8"]
+[ext_resource type="PackedScene" uid="uid://cl4amue2vk25l" path="res://Tapestry/Tapestry.tscn" id="1_y8bww"]
+[ext_resource type="PackedScene" uid="uid://d1ivxne5jtehe" path="res://Background/Places/olympiaTilemap.tscn" id="2_5a64m"]
+[ext_resource type="PackedScene" uid="uid://6w0kogq61wjf" path="res://Background/Places/theaterTilemap.tscn" id="3_ernf3"]
+[ext_resource type="PackedScene" uid="uid://cp3uheuedlasm" path="res://Background/Places/springTilemap.tscn" id="5_wd4bi"]
+[ext_resource type="PackedScene" uid="uid://dg2stdxcok41d" path="res://Background/Places/templeTilemap.tscn" id="6_sefno"]
+
+[node name="Main" type="Node2D" node_paths=PackedStringArray("place_node")]
+script = ExtResource("1_xinb8")
+place_node = NodePath("Olympia")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+unique_name_in_owner = true
+
+[node name="Olympia" parent="." instance=ExtResource("2_5a64m")]
+unique_name_in_owner = true
+visible = false
+position = Vector2(961, 544)
+
+[node name="Theater" parent="." instance=ExtResource("3_ernf3")]
+unique_name_in_owner = true
+visible = false
+position = Vector2(970, 544)
+
+[node name="Spring" parent="." instance=ExtResource("5_wd4bi")]
+unique_name_in_owner = true
+visible = false
+position = Vector2(973, 426)
+
+[node name="Temple" parent="." instance=ExtResource("6_sefno")]
+unique_name_in_owner = true
+visible = false
+position = Vector2(951, 464)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+
+[node name="Tapestry" parent="CanvasLayer" instance=ExtResource("1_y8bww")]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Camera2D" type="Camera2D" parent="CanvasLayer"]
+position = Vector2(961, 544)
+scale = Vector2(2, 2)
+
+[connection signal="give_item" from="Olympia" to="." method="_on_olympia_give_item"]
+[connection signal="open_tap" from="Olympia" to="." method="_on_olympia_open_tap"]
+[connection signal="give_item" from="Theater" to="." method="_on_theater_give_item"]
+[connection signal="open_tap" from="Theater" to="." method="_on_theater_open_tap"]
+[connection signal="give_item" from="Spring" to="." method="_on_spring_give_item"]
+[connection signal="open_tap" from="Spring" to="." method="_on_spring_open_tap"]
+[connection signal="give_item" from="Temple" to="." method="_on_temple_give_item"]
+[connection signal="open_tap" from="Temple" to="." method="_on_temple_open_tap"]
+[connection signal="nextrun" from="CanvasLayer/Tapestry" to="." method="_on_tapestry_nextrun"]
