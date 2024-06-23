@@ -22,9 +22,15 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
+"apollo": "res://Dialogue/Gods/apollo.dch",
+"dionysus": "res://Dialogue/Gods/dionysus.dch",
+"poseidon": "res://Dialogue/Gods/poseidon.dch",
 "zeus": "res://Dialogue/Gods/zeus.dch"
 }
 directories/dtl_directory={
+"apollo": "res://Dialogue/Gods/apollo.dtl",
+"dionysus": "res://Dialogue/Gods/dionysus.dtl",
+"poseidon": "res://Dialogue/Gods/poseidon.dtl",
 "timeline": "res://Dialogue/timeline.dtl",
 "zeus": "res://Dialogue/Gods/zeus.dtl"
 }

@@ -3,12 +3,16 @@ join zeus 1
 if {scroll} != true:
 	- Who are you?
 		I am the god of sky, lightning, thunder, law, and order, the king of the gods in your mind's eye\: Zeus
-		zeus: Do you seek my wisdom my child?
-		- Yes
-			[wait time="1.0"]
-			zeus: <Empty Text Event>
-		- No
-			[wait time="1.0"]
-			zeus: Be warned, it is unwise to refuse a courtesy offered by the gods
+	- You again
+		zeus: I must warn you to not speak in such a familiar tone lest I strike you down
+	zeus: Do you seek my wisdom my child?
+	- Yes
+		[wait time="1.0"]
+		zeus: A wise decision
+		If you seek divinity, contniue to pray deep into the night, and another olympian may descend to fulfill your fervent desire
+	- No
+		[wait time="1.0"]
+		zeus: Be warned, it is ill-advised to refuse a courtesy offered by the gods
+		For now, however, I shant smite you down
 if {} == true:
-	zeus: I know Hera will be mad at me again, but it wouldn't hurt if I went down to the mortal realm once more to share a night of passion with Europa
+	zeus: Hera will be mad at me again, but it wouldn't hurt if I went down to the mortal realm once more to seek a night of passion with this beautiful mortal Europa

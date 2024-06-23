@@ -1,0 +1,16 @@
+[signal]
+join poseidon 1
+if {scroll} != true:
+	Do you revere me human?
+	[wait time="1.0"]
+	I warn you to answer wisely
+	- Yes
+	- Yes
+	Well said
+	[wait time="1.0"]
+	poseidon: I am the god of the seas, storms, earthquakes, and horses
+	- Horses?
+	poseidon: Horses I say, the most magestic creatures in all the land
+	poseidon: Sea creatures are also quite magestic as well
+if {scroll} == true:
+	poseidon: <Empty Text Event>

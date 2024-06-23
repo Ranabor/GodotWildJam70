@@ -1,0 +1,23 @@
+[signal]
+if {scroll} != true:
+	Yo
+	- Look around
+	join apollo 1
+	Yes you Lydian woman
+	apollo: Hey there, all you gotta know is that I'm Apollo, the god of oracles, since that's all you'll need me for
+	apollo: *snarks* Not that you would even have the attention span to care about what else I could do
+	- Quite informal for a god aren't you
+		apollo: Bro, this is literally your imagination, this is just how a mortal, such as yourself, perceives eternal youth
+	- ...
+		[wait time="1.0"]
+	apollo: Anyway
+	apollo: I'll just leave you with a prophecy or two so you don't bother me again
+	apollo: No maidens?
+	apollo: You can find one *drools* at the spring when the sun is high
+	apollo: Also
+	apollo: Hastiness will only leave you unsatisfied, but patience will curse you to perfection
+if {scroll} == true:
+	apollo: I see, so you found that
+	apollo: That is the truth of your belief
+	apollo: The gods are only as human as mortals to you
+	apollo: Again I warn you your patience will curse you forever more
