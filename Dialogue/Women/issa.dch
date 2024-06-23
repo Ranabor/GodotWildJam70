@@ -2,7 +2,7 @@
 "@path": "res://addons/dialogic/Resources/character.gd",
 "@subpath": NodePath(""),
 "_translation_id": "",
-"color": Color(0.792969, 0.520386, 0, 1),
+"color": Color(0.599723, 0.310242, 0.863281, 1),
 "custom_info": {
 "sound_mood_default": "",
 "sound_moods": {},
@@ -10,7 +10,7 @@
 },
 "default_portrait": "",
 "description": "",
-"display_name": "Apollo",
+"display_name": "Issa",
 "mirror": false,
 "nicknames": [""],
 "offset": Vector2(0, 0),

@@ -23,18 +23,27 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 directories/dch_directory={
 "apollo": "res://Dialogue/Gods/apollo.dch",
+"demeter": "res://Dialogue/Women/demeter.dch",
 "dionysus": "res://Dialogue/Gods/dionysus.dch",
+"erigone": "res://Dialogue/Women/erigone.dch",
+"europa": "res://Dialogue/Women/europa.dch",
+"issa": "res://Dialogue/Women/issa.dch",
 "poseidon": "res://Dialogue/Gods/poseidon.dch",
 "zeus": "res://Dialogue/Gods/zeus.dch"
 }
 directories/dtl_directory={
 "apollo": "res://Dialogue/Gods/apollo.dtl",
+"demeter": "res://Dialogue/Women/demeter.dtl",
 "dionysus": "res://Dialogue/Gods/dionysus.dtl",
+"erigone": "res://Dialogue/Women/erigone.dtl",
+"europa": "res://Dialogue/Women/europa.dtl",
+"issa": "res://Dialogue/Women/issa.dtl",
 "poseidon": "res://Dialogue/Gods/poseidon.dtl",
 "timeline": "res://Dialogue/timeline.dtl",
 "zeus": "res://Dialogue/Gods/zeus.dtl"
 }
 variables={
+"demeter": false,
 "scroll": false
 }
 layout/style_list=[]

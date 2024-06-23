@@ -12,5 +12,13 @@ if {scroll} != true:
 	- Horses?
 	poseidon: Horses I say, the most magestic creatures in all the land
 	poseidon: Sea creatures are also quite magestic as well
+	- Don't you have a hint for me?
+	poseidon: Talking back to me are you mortal?
+	poseidon: Away with thee vermin lest I wash you away
+	if {demeter} == true:
+		- Demeter has asked you stop your advances
+			poseidon: That sister of mine, always prattling
+			poseidon: Pay no mind to her
 if {scroll} == true:
-	poseidon: <Empty Text Event>
+	poseidon: She thinks she can hide from me as a horse, oh Demeter
+	poseidon: I'll have you one way or another
