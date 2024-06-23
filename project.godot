@@ -23,7 +23,8 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 directories/dch_directory={}
 directories/dtl_directory={
-"timeline": "res://Dialogue/timeline.dtl"
+"timeline": "res://Dialogue/timeline.dtl",
+"zeus": "res://Dialogue/zeus.dtl"
 }
 
 [display]
