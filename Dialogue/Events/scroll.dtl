@@ -1,0 +1,14 @@
+Would you like to read the scroll?
+- Yes
+	It reads\:\
+Zeus, with thunderous wrath and lustful gaze,\
+Poseidon, who flooded lands in his craze,\
+Apollo, whose pride eclipsed the skies,\
+And Dionysus, drunk with passions' cries.\
+Each scene depicted that mortal folly\
+Is no different than the sinful gods' activities.
+	[wait time="1.0"]
+	What will you do with this truth in your heart?
+	set {scroll} = true
+- No
+	[wait time="2.0"]
