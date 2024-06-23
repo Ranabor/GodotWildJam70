@@ -1,0 +1,14 @@
+[signal]
+join zeus 1
+if {scroll} != true:
+	- Who are you?
+		I am the god of sky, lightning, thunder, law, and order, the king of the gods in your mind's eye\: Zeus
+		zeus: Do you seek my wisdom my child?
+		- Yes
+			[wait time="1.0"]
+			zeus: <Empty Text Event>
+		- No
+			[wait time="1.0"]
+			zeus: Be warned, it is unwise to refuse a courtesy offered by the gods
+if {} == true:
+	zeus: I know Hera will be mad at me again, but it wouldn't hurt if I went down to the mortal realm once more to share a night of passion with Europa
