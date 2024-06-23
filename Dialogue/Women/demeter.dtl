@@ -1,0 +1,12 @@
+[signal]
+join demeter 1
+demeter: Greetings mortal, I am the goddess of the harvest, agriculture, fertility of the earth, and sacred law, Demeter
+demeter: Could you tell that brutish brother of mine, Poseidon, to keep his hands away from me
+- Of course
+	demeter: You are quite wise mortal aren't you
+	set {demeter} = true
+- No
+	demeter: Why must men and mortals be so foolish and arrogant
+	set {demeter} = false
+[wait time="1.0"]
+demeter: Go now, I shall dismiss you

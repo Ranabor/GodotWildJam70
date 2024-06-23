@@ -1,0 +1,14 @@
+[signal]
+join dionysus 1
+if {scroll} != true:
+	Drink and dance with me mortal! Intoxication will free you from your worries!
+	- No thanks
+	Suit yourself
+	dionysus: I *hic* am Bacchus, or was it Dionysus, I can't remember
+	- What kind of god doesn't know his own name
+	dionysus: Shup, I'm the god here, the god of wine, festivity, religious ecstasy, theater, and all that makes life free in the world *laughs drunkenly*
+	dionysus: Go away then mortal, you only make things cloudy and gloomy like Poseidon, all serious and whatnot
+	dionysus: Run along then
+if {scroll} == true:
+	dionysus: *hic* They'll pay, they'll all pay
+	dionysus: They're women will all hang as my Erigone did for what their transgression
