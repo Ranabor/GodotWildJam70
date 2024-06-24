@@ -173,3 +173,4 @@ position = Vector2(192.5, -15)
 
 [connection signal="pressed" from="Area2D/given" to="." method="_on_given_pressed"]
 [connection signal="pressed" from="Arachne/Button" to="." method="_on_button_pressed"]
+[connection signal="talk" from="ChosenCharacter" to="." method="_on_chosen_character_talk"]

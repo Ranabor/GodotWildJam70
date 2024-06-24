@@ -6,11 +6,14 @@ const NIGHT = "364363"
 
 var place: Tapestry_Item
 var setting: EnumStorage.Settings
-
+var end: bool = false
+var trueEnd: bool = false
 var tapestryVector: Vector2
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	tapestryVector = %Tapestry.position
+	var dialog = Dialogic.start("timeline")
+	add_child(dialog)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -18,6 +21,14 @@ func _process(delta):
 
 
 func _on_tapestry_nextrun():
+	if (%Tapestry.charUnlocked.size() == 3 && !end):
+		var dialog = Dialogic.start("normalEnd")
+		add_child(dialog)
+		end = true
+	if (%Tapestry.charUnlocked.size() == 8):
+		var dialog = Dialogic.start("trueEnd")
+		add_child(dialog)
+		trueEnd = true
 	place = %Tapestry.current_place
 	setting = %Tapestry.current_setting
 	if (setting == EnumStorage.Settings.night || setting == EnumStorage.Settings.thunder):
@@ -67,11 +78,12 @@ func _on_theater_give_item():
 	elif (setting == EnumStorage.Settings.night):
 		%Tapestry.unlock_char("Erigone")
 	elif (setting == EnumStorage.Settings.windy):
-		pass
+		var dialog = Dialogic.start("scroll")
+		add_child(dialog)
 
 func _on_spring_give_item():
 	if (setting == EnumStorage.Settings.night):
-		%Tapestry.unlock_place(%Spring.setting_given)
+		%Tapestry.unlock_setting(%Spring.setting_given)
 	elif (setting == EnumStorage.Settings.day):
 		%Tapestry.unlock_char("Issa")
 	elif (setting == EnumStorage.Settings.windy):
@@ -89,3 +101,7 @@ func _on_temple_give_item():
 		%Tapestry.unlock_char("Apollo")
 	elif (setting == EnumStorage.Settings.windy):
 		%Tapestry.unlock_char("Europa")
+
+
+func _on_tapestry_close():
+	%Tapestry.position = Vector2(2000, 2000)

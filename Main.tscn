@@ -59,4 +59,5 @@ scale = Vector2(2, 2)
 [connection signal="open_tap" from="Spring" to="." method="_on_spring_open_tap"]
 [connection signal="give_item" from="Temple" to="." method="_on_temple_give_item"]
 [connection signal="open_tap" from="Temple" to="." method="_on_temple_open_tap"]
+[connection signal="close" from="CanvasLayer/Tapestry" to="." method="_on_tapestry_close"]
 [connection signal="nextrun" from="CanvasLayer/Tapestry" to="." method="_on_tapestry_nextrun"]

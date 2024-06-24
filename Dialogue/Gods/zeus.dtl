@@ -14,5 +14,5 @@ if {scroll} != true:
 		[wait time="1.0"]
 		zeus: Be warned, it is ill-advised to refuse a courtesy offered by the gods
 		For now, however, I shant smite you down
-if {} == true:
+if {scroll} == true:
 	zeus: Hera will be mad at me again, but it wouldn't hurt if I went down to the mortal realm once more to seek a night of passion with this beautiful mortal Europa

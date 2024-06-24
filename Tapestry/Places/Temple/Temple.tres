@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Tapestry_Item" load_steps=6 format=3 uid="uid://do5ci2p6cpthm"]
+
+[ext_resource type="Texture2D" uid="uid://tj6y35jisuho" path="res://Tapestry/Places/Temple/TempleDayWool.png" id="1_klgn3"]
+[ext_resource type="Script" path="res://Tapestry/tapestry_item.gd" id="1_uomdq"]
+[ext_resource type="Texture2D" uid="uid://jqrb5mdll2wy" path="res://Tapestry/Places/Temple/TempleNightWool.png" id="2_mb1ib"]
+[ext_resource type="Texture2D" uid="uid://bw7m218vd26hf" path="res://Tapestry/Places/Temple/TempleThunderWool.png" id="3_1ldbv"]
+[ext_resource type="Texture2D" uid="uid://cdij6rc72ixjl" path="res://Tapestry/Places/Temple/TempleWindyWool.png" id="4_aeunn"]
+
+[resource]
+script = ExtResource("1_uomdq")
+name = "Temple"
+DAY = ExtResource("1_klgn3")
+NIGHT = ExtResource("2_mb1ib")
+WINDY = ExtResource("4_aeunn")
+THUNDER = ExtResource("3_1ldbv")

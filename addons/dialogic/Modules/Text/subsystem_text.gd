@@ -75,6 +75,10 @@ func load_game_state(load_flag:=LoadFlags.FULL_LOAD) -> void:
 
 func post_install():
 	dialogic.Settings.connect_to_change('text_speed', _update_user_speed)
+	
+	collect_character_names()
+	collect_text_effects()
+	collect_text_modifiers()
 
 #endregion
 
@@ -148,7 +152,7 @@ func update_dialog_text(text: String, instant := false, additional := false) -> 
 	# Reset Auto-Advance temporarily and the No-Skip setting:
 	dialogic.Inputs.auto_advance.enabled_until_next_event = false
 	dialogic.Inputs.auto_advance.override_delay_for_current_event = -1
-	dialogic.Inputs.manual_advance.enabled_until_next_event = false
+	dialogic.Inputs.manual_advance.disabled_until_next_event = false
 
 	set_text_reveal_skippable(true, true)
 
@@ -189,6 +193,8 @@ func update_typing_sound_mood(mood:Dictionary = {}) -> void:
 func show_textbox(instant:=false) -> void:
 	var emitted := instant
 	for text_node in get_tree().get_nodes_in_group('dialogic_dialog_text'):
+		if not text_node.enabled:
+			continue
 		if !text_node.textbox_root.visible and !emitted:
 			animation_textbox_show.emit()
 			text_node.textbox_root.show()
@@ -383,9 +389,6 @@ func parse_text_modifiers(text:String, type:int=TextTypes.DIALOG_TEXT) -> String
 ####################################################################################################
 
 func _ready():
-	collect_character_names()
-	collect_text_effects()
-	collect_text_modifiers()
 	dialogic.event_handled.connect(hide_next_indicators)
 
 	_autopauses = {}

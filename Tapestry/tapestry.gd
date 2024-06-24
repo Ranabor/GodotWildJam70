@@ -5,8 +5,8 @@ var current_place: Tapestry_Item
 var tl = Tapestry_List.new()
 var current_setting
 var charChosen: String = ""
-
-var charUnlocked: Array[String]
+signal close
+var charUnlocked: Array[String] = ["1","2","3","1","1","1","1","1"]
 
 signal nextrun
 
@@ -15,7 +15,7 @@ func _ready():
 	for item in starting_items:
 		tl.unlock_place(item)
 		%PlaceButton.add_item(item.name)
-	tl.unlock_setting(EnumStorage.Settings.thunder)
+	tl.unlock_setting(EnumStorage.Settings.day)
 	#tl.unlock_setting(EnumStorage.Settings.thunder)
 	current_setting = tl.unlocked_settings[0]
 	current_place = tl.unlocked_places[0]
@@ -72,10 +72,11 @@ func _on_setting_button_item_selected(index):
 
 func _on_submit_pressed():
 	nextrun.emit()
+	%Close.show()
 
 
 func _on_close_pressed():
-	$".".hide()
+	close.emit()
 
 
 func _on_char_button_item_selected(index):

@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://cl4amue2vk25l"]
 
 [ext_resource type="Script" path="res://Tapestry/tapestry.gd" id="1_4wrbg"]
-[ext_resource type="Resource" uid="uid://dfutoygrnyl1p" path="res://Tapestry/Places/Olympia/Olympia.tres" id="2_2uno6"]
 [ext_resource type="Texture2D" uid="uid://hlgn3elstgdn" path="res://Tapestry/TapestryPanelWool.png" id="2_ai642"]
 [ext_resource type="Script" path="res://Tapestry/tapestry_item.gd" id="2_rk1cc"]
+[ext_resource type="Resource" uid="uid://do5ci2p6cpthm" path="res://Tapestry/Places/Temple/Temple.tres" id="3_lem3j"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2xhmg"]
 texture = ExtResource("2_ai642")
@@ -23,7 +23,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_4wrbg")
-starting_items = Array[ExtResource("2_rk1cc")]([ExtResource("2_2uno6")])
+starting_items = Array[ExtResource("2_rk1cc")]([ExtResource("3_lem3j")])
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -54,6 +54,8 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="Close" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+visible = false
 layout_mode = 2
 text = "X"
 

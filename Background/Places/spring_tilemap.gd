@@ -18,3 +18,7 @@ func _on_button_pressed():
 
 func _on_given_pressed():
 	give_item.emit()
+
+
+func _on_chosen_character_talk():
+	talk_to()

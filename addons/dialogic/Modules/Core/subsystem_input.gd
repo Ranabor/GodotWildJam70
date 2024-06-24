@@ -28,8 +28,8 @@ func clear_game_state(_clear_flag := DialogicGameHandler.ClearFlags.FULL_CLEAR) 
 	if not is_node_ready():
 		await ready
 
-	manual_advance.enabled_until_next_event = false
-	manual_advance.enabled_forced = true
+	manual_advance.disabled_until_next_event = false
+	manual_advance.system_enabled = true
 
 
 func pause() -> void:
@@ -48,6 +48,7 @@ func resume() -> void:
 func post_install() -> void:
 	dialogic.Settings.connect_to_change('autoadvance_delay_modifier', auto_advance._update_autoadvance_delay_modifier)
 	auto_skip.toggled.connect(_on_autoskip_toggled)
+	auto_skip._init()
 	add_child(input_block_timer)
 	input_block_timer.one_shot = true
 
@@ -88,7 +89,7 @@ func handle_input() -> void:
 
 ## Unhandled Input is used for all NON-Mouse based inputs.
 func _unhandled_input(event:InputEvent) -> void:
-	if Input.is_action_pressed(ProjectSettings.get_setting('dialogic/text/input_action', 'dialogic_default_action')):
+	if Input.is_action_just_pressed(ProjectSettings.get_setting('dialogic/text/input_action', 'dialogic_default_action')):
 		if event is InputEventMouse:
 			return
 		handle_input()
@@ -97,12 +98,19 @@ func _unhandled_input(event:InputEvent) -> void:
 ## Input is used for all mouse based inputs.
 ## If any DialogicInputNode is present this won't do anything (because that node handles MouseInput then).
 func _input(event:InputEvent) -> void:
-	if Input.is_action_pressed(ProjectSettings.get_setting('dialogic/text/input_action', 'dialogic_default_action')):
+	if Input.is_action_just_pressed(ProjectSettings.get_setting('dialogic/text/input_action', 'dialogic_default_action')):
 
 		if not event is InputEventMouse or get_tree().get_nodes_in_group('dialogic_input').any(func(node):return node.is_visible_in_tree()):
 			return
 
 		handle_input()
+
+
+## This is called from the gui_input of the InputCatcher and DialogText nodes
+func handle_node_gui_input(event:InputEvent) -> void:
+	if Input.is_action_just_pressed(ProjectSettings.get_setting('dialogic/text/input_action', 'dialogic_default_action')):
+		if event is InputEventMouseButton and event.pressed:
+			DialogicUtil.autoload().Inputs.handle_input()
 
 
 func is_input_blocked() -> bool:
@@ -180,7 +188,7 @@ func effect_input(text_node:Control, skipped:bool, argument:String) -> void:
 
 func effect_noskip(text_node:Control, skipped:bool, argument:String) -> void:
 	dialogic.Text.set_text_reveal_skippable(false, true)
-	manual_advance.enabled_until_next_event = true
+	manual_advance.disabled_until_next_event = true
 	effect_autoadvance(text_node, skipped, argument)
 
 
